@@ -1,0 +1,67 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+int main() 
+{
+	int t,k;
+	cin>>t;
+	for(k=1;k<=t;k++)
+	{
+    int g,b,n,s;
+	cin>>g>>b;
+	cin>>n;
+	int a[n][2],i,j,f,m;
+	int x=0,y=0;
+	for( i=0;i<n;i++)
+	{
+		for( j=0;j<2;j++)
+		{
+			cin>>a[i][j];
+		}
+	}
+	for(i=0;i<n;i++)
+	{
+	   if(a[i][0]==1)
+	   {
+		   x++;
+	   }
+	   if(a[i][1]==1)
+	   {
+		   y++;
+	   }
+	
+	}
+	if(x>y)
+	{
+	 if(g>b)
+	 {
+		 f=(y*g)+(x*b);
+		 cout<<f<<"\n";
+	 }
+	 else
+	 {
+		 m=(y*b)+(x*g);
+		 cout<<m<<"\n";
+	 }
+	}
+	else
+	{
+			if(g>b)
+			{
+				f=(x*g)+(y*b);
+				cout<<f<<"\n";
+			}
+			else
+			{
+				m=(x*b)+(y*g);
+				cout<<m<<"\n";
+			}
+		
+	}
+	
+	
+	
+	}
+	return 0;
+}
